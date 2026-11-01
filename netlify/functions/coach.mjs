@@ -22,12 +22,12 @@ export default async (request) => {
 
     if (!apiKey) {
       return json(503, {
-        error: "Chưa đọc được GEMINI_API_KEY. Hãy kiểm tra Environment Variables và Functions scope trong Netlify."
+        error: "Chưa đọc được GEMINI_API_KEY. Hãy kiểm tra Environment Variables trong Netlify."
       });
     }
 
     const supabaseUrl = process.env.SUPABASE_URL;
-    const supabaseKey = process.env.SUPABASE_ANON_KEY;
+    const supabaseKey = process.env.SUPABASE_PUBLISHABLE_KEY;
 
     // 2. Kiểm tra đăng nhập
     const token = (request.headers.get("authorization") || "")
