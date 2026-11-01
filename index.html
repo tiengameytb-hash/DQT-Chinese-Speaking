@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阳光钱（DQT）｜Nói tiếng Trung tự tin hơn</title>
+<style>
+:root{--ink:#34234d;--muted:#81748e;--paper:#fff7fc;--card:#fffdfd;--red:#ed668b;--red2:#ffe7f0;--green:#6d9e78;--line:#f3dce9;--gold:#e6b85f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 8% 12%,#ffe7f2 0,transparent 25%),radial-gradient(circle at 92% 18%,#e9e4ff 0,transparent 23%),linear-gradient(135deg,#fff8fc,#fff7f0 55%,#f6f1ff);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:26px max(22px,calc((100vw - 1160px)/2));background:linear-gradient(120deg,#9c75c9,#e879a2 55%,#f5b7c9);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{font-size:13px;letter-spacing:2px;font-weight:800;color:#e9c99a}.hero h1{font-family:Georgia,serif;font-size:clamp(27px,4vw,43px);font-weight:500;margin:10px 0 5px}.hero p{color:#d3ddd5;margin:0;font-size:14px}.streak{border:1px solid #62756a;border-radius:14px;padding:12px 16px;white-space:nowrap;font-size:13px}
+main{max-width:1160px;margin:28px auto;padding:0 20px 60px}.intro{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}.intro h2{font:500 25px Georgia;margin:0 0 5px}.intro p{margin:0;color:var(--muted);font-size:14px}
+.progress{font-size:13px;color:var(--muted);text-align:right}.bar{width:150px;height:7px;background:#e8e2d8;border-radius:9px;margin-top:7px;overflow:hidden}.bar span{display:block;height:100%;background:var(--green);width:0%}
+.layout{display:grid;grid-template-columns:310px 1fr;gap:18px}.panel,.work{background:var(--card);border:1px solid var(--line);border-radius:19px;box-shadow:0 5px 20px #40351b08}.panel{padding:19px;height:max-content}.panel h3{font-size:14px;margin:0 0 13px}.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:20px}.level{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 5px;font-weight:750;color:#68756d;cursor:pointer}.level.active{background:linear-gradient(120deg,#9874cf,#ed7199);color:white;border-color:#ed9ab8}.level small{display:block;font-size:10px;font-weight:500;opacity:.8;margin-top:3px}
+select,input{font:inherit}.filter{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);margin-bottom:14px}
+.topic-list{display:grid;gap:7px;max-height:430px;overflow:auto}.topic{border:1px solid transparent;background:#faf7f1;text-align:left;border-radius:11px;padding:11px 12px;cursor:pointer;color:var(--ink)}.topic:hover,.topic.active{border-color:#d5a18f;background:#fff4ef}.topic strong{display:block;font-size:13px}.topic span{font-size:11px;color:var(--muted)}
+.work{padding:clamp(18px,3vw,30px)}.eyebrow{color:var(--red);font-weight:800;letter-spacing:1.4px;font-size:10px;text-transform:uppercase}.topic-head{display:flex;justify-content:space-between;gap:15px;align-items:start}.topic-head h2{font:500 29px Georgia;margin:7px 0 3px}.topic-head .translation{color:var(--muted);font-size:13px}.pill{background:#edf2ed;color:#426b56;border-radius:30px;padding:7px 11px;font-size:11px;font-weight:750;white-space:nowrap}
+.prompt{margin:20px 0;padding:17px;border-radius:14px;background:#f4eee4}.prompt label,.section-title{font-size:11px;letter-spacing:1px;color:#8a6b4e;font-weight:800;text-transform:uppercase}.question{font-size:20px;line-height:1.5;margin:9px 0 5px}.pinyin{color:#8b7665;font-size:13px}.translation{color:var(--muted);font-size:13px}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:13px}.mini{border:1px solid var(--line);border-radius:13px;padding:15px}.mini h3{font-size:13px;margin:0 0 11px}.grammar{display:grid;gap:10px}.grammar-item{padding-bottom:9px;border-bottom:1px solid #f0ece5}.grammar-item:last-child{border:0;padding:0}.pattern{font-weight:800;color:#345c49;font-size:16px}.meaning{font-size:12px;color:var(--muted);margin:3px 0}.example{font-size:13px;line-height:1.55}.outline{margin:0;padding-left:18px;font-size:13px;line-height:1.9}.outline li::marker{color:var(--red)}
+.follow{margin-top:14px}.follow ul{margin:9px 0 0;padding-left:19px;font-size:13px;line-height:1.8}
+.practice{margin-top:18px;border-top:1px solid var(--line);padding-top:18px}.practice-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.practice h3{font-size:14px;margin:0}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink)}.btn.primary{background:linear-gradient(120deg,#9b75d0,#ed7199);border-color:#d98bb6;color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}.timer{font-variant-numeric:tabular-nums;font-size:20px;font-weight:800;color:var(--green)}
+textarea{width:100%;min-height:100px;border:1px solid var(--line);border-radius:12px;padding:12px;font:14px/1.6 inherit;resize:vertical;background:#fff}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:8px}.saved{color:var(--green);font-size:12px;min-height:18px}
+footer{text-align:center;color:#8a948d;font-size:11px;margin-top:25px}
+@media(max-width:780px){header{align-items:flex-start}.streak{display:none}.layout{grid-template-columns:1fr}.topic-list{grid-template-columns:1fr 1fr;max-height:280px}.columns{grid-template-columns:1fr}.intro{align-items:start;flex-direction:column}.progress{text-align:left}.bar{width:200px}}
+@media(max-width:440px){.topic-list{grid-template-columns:1fr}.topic-head h2{font-size:24px}}
+
+#appShell{display:none}
+#authGate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--paper)}
+.auth-card{width:min(100%,460px);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 12px 40px rgba(36,53,47,.08)}
+.auth-card h1{font-size:27px;margin:0 0 10px}.auth-card p{color:var(--muted);line-height:1.6}
+.auth-card input{width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;font-size:16px;margin:8px 0 14px}
+.auth-card button{width:100%;padding:14px;border:0;border-radius:12px;background:var(--green);color:white;font-size:16px;font-weight:700;cursor:pointer}
+.auth-status{min-height:24px;font-size:14px;color:var(--green);margin-top:12px;overflow-wrap:anywhere}
+.account-bar{display:flex;gap:12px;align-items:center;justify-content:flex-end;padding:10px 18px;color:var(--muted);font-size:13px}
+.account-bar button{border:1px solid var(--line);background:transparent;border-radius:9px;padding:7px 10px;color:inherit;cursor:pointer}
+
+
+/* Pastel chibi-inspired learning skin */
+.brand{color:#fff0f6;text-shadow:0 1px 4px #8d5b9b55} .panel,.work,.mini,.auth-card{border-color:#f1d8e8;box-shadow:0 8px 24px #b77da51a}
+.topic{background:linear-gradient(120deg,#fff7fb,#f8f5ff)}.prompt{background:linear-gradient(120deg,#fff0f5,#f1edff)}
+.vocab-chips{display:flex;flex-wrap:wrap;gap:7px}.vocab-chip{border:1px solid #edc8dd;background:#fff3f8;color:#68466f;padding:6px 10px;border-radius:18px;font-size:12px}
+.sample-answer{font-size:13px;line-height:1.8;white-space:pre-line;margin-bottom:10px;color:#513b61}
+.score-card{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:14px;background:linear-gradient(110deg,#e5f7e8,#fff1d9);margin:8px 0 12px}.score-card strong{font-size:27px;color:#38844a}.score-card span{font-size:12px;color:#5f6d60}
+.chat-log{display:grid;gap:8px;max-height:220px;overflow:auto;padding:8px;background:#fff8fc;border-radius:12px}.chat-bubble{padding:10px 12px;border-radius:13px;max-width:90%;font-size:13px;line-height:1.6}.chat-bubble.bot{background:#f0eaff;justify-self:start}.chat-bubble.user{background:#ffe8f0;justify-self:end}.chat-compose{display:flex;gap:7px;margin-top:9px}.chat-compose input{min-width:0;flex:1;border:1px solid var(--line);border-radius:10px;padding:10px}.chat-compose .btn{white-space:nowrap}
+@media(max-width:520px){.chat-compose{flex-wrap:wrap}.chat-compose input{flex-basis:100%}}
+
+
+/* DQT chibi dashboard: layout follows the first approved three-panel mockups */
+:root{--ink:#30204c;--muted:#806e91;--paper:#fff7fc;--card:#fffdfd;--red:#ed5e9a;--red2:#ffe4f1;--line:#f2cfe4;--gold:#efb94f;--lav:#8b70e8}
+body{background:radial-gradient(ellipse at 4% 5%,#ffd9ed 0,transparent 28%),radial-gradient(ellipse at 96% 16%,#e7ddff 0,transparent 30%),linear-gradient(135deg,#fff8fc,#fff1f8 55%,#f2edff);background-attachment:fixed;color:var(--ink)}
+header{position:relative;isolation:isolate;min-height:205px;padding:28px max(22px,calc((100vw - 1440px)/2));background:linear-gradient(90deg,#fff0f8dd,#f5eaffb8),url('dqt-hero.jpg') center 43%/cover;color:#54255f;border-bottom:1px solid #efc9e1;overflow:hidden}
+header:after{content:'🐱';position:absolute;right:max(28px,calc((100vw - 1390px)/2));bottom:-28px;font-size:150px;filter:drop-shadow(0 8px 8px #9c5a8b30);z-index:-1;opacity:.92}
+.hero h1{font-family:ui-rounded,system-ui,sans-serif;font-weight:900;color:#9d2872;text-shadow:0 2px 0 #fff;font-size:clamp(27px,3.7vw,43px)}.hero p{color:#654477;font-weight:700}.brand{color:#9d367d;text-shadow:none}
+main{max-width:1500px;margin:20px auto;padding:0 18px 60px}.intro{background:#ffffffc9;border:1px solid #f1d4e7;border-radius:20px;padding:14px 18px;box-shadow:0 8px 26px #b36d9c12}
+.layout{display:grid;grid-template-columns:245px minmax(0,1fr) 300px;gap:15px;align-items:start}
+.panel,.work,.mini,.auth-card{background:#ffffffed;border:1px solid #f0cde2;border-radius:22px;box-shadow:0 9px 28px #a86b9d1c}
+.panel{position:sticky;top:12px;padding:17px;position:sticky}.panel:after{content:"";display:block;height:116px;margin:10px -4px -4px;background:url("dqt-cat-left.jpg") center 34%/cover no-repeat;border-radius:16px;opacity:.94}.work{padding:clamp(14px,2vw,24px)}.panel h3,.mini h3{color:#713c91}.level{background:linear-gradient(145deg,#fff,#fff0f7);border-color:#efcde1;color:#75466f}.level.active{background:linear-gradient(120deg,#a77be9,#f16eaa);color:#fff}
+.topic{background:linear-gradient(120deg,#fff8fc,#f7f2ff);border-color:#f4d9e9}.topic.active,.topic:hover{border-color:#e88cbd;background:#fff0f7}.prompt{background:linear-gradient(120deg,#fff0f7,#f0eaff);border:1px solid #f5d6e9}.prompt label,.section-title{color:#a24d8d}.mini{padding:15px}.columns{gap:14px}.pattern{color:#8246a0}.vocab-chip{background:#fff0f7;border-color:#edc2dd;color:#71426e;padding:8px 11px}.sample-answer{background:#fff8fd;border:1px solid #f4d8e9;border-radius:14px;padding:14px;white-space:pre-line}.score-card{background:linear-gradient(110deg,#f2eaff,#ffeaf4)}.score-card strong{color:#8c52c6}
+/* right-side AI conversation panel */
+.ai-rail{display:grid;gap:14px;min-width:0}.ai-rail .mini{padding:15px;position:relative;overflow:hidden}.ai-rail .mini:first-child{background:linear-gradient(160deg,#fff7fc,#f4edff)}.ai-rail .mini:first-child:before{content:'🐱';position:absolute;right:12px;top:4px;font-size:46px;opacity:.25}.chat-log{max-height:420px;min-height:270px;background:#fff9fd;border:1px solid #f2d8ea;padding:12px}.chat-bubble{max-width:88%;border-radius:17px;font-size:13px;padding:11px 13px;box-shadow:0 3px 10px #8f5d8c0c}.chat-bubble.bot{background:#f0eaff;border:1px solid #dfd2fa;border-bottom-left-radius:5px}.chat-bubble.user{background:#ffe7f2;border:1px solid #f5c9df;border-bottom-right-radius:5px}.chat-compose input{border-color:#e9c9e0}.btn{border-color:#edcfe2;background:#fff8fc}.btn.primary{background:linear-gradient(120deg,#9870e5,#ef6da9);border-color:#d68cc1;color:#fff}
+#authGate{background:radial-gradient(circle at 15% 15%,#ffe0f0,transparent 35%),radial-gradient(circle at 90% 85%,#e9e0ff,transparent 32%),#fff8fc}.auth-card{background:#ffffffed}.auth-card button{background:linear-gradient(120deg,#9b75dc,#ed6ba6)}
+#rightRailTitle{font-size:15px;margin:0 0 8px;color:#713c91}.rail-cat{width:100%;height:92px;object-fit:cover;object-position:center 34%;border-radius:16px;margin:6px 0 10px;border:1px solid #f0d3e5}
+.section-kicker{font-size:10px;font-weight:900;letter-spacing:1px;color:#b65b98;margin-bottom:7px}.sample-meta{font-size:12px;color:#765b83;line-height:1.7;margin-top:8px}.practice{background:#fffafd;border:1px solid #f2d4e6;border-radius:18px;padding:16px}.follow{background:linear-gradient(120deg,#fffafd,#f8f3ff)}
+@media(max-width:1120px){.layout{grid-template-columns:220px minmax(0,1fr)}.ai-rail{grid-column:2;grid-row:2}.panel{grid-row:1 / span 2}}
+@media(max-width:760px){header{min-height:180px;padding:22px 18px}header:after{font-size:92px;right:4px;bottom:-20px}.layout{grid-template-columns:1fr}.panel{position:static;grid-row:auto}.ai-rail{grid-column:auto;grid-row:auto}.topic-list{grid-template-columns:1fr 1fr;max-height:240px}.columns{grid-template-columns:1fr}.chat-log{min-height:220px;max-height:320px}}
+
+</style>
+</head>
+<body>
+<div id="authGate">
+  <div class="auth-card">
+    <div class="brand">🐱 阳光钱（DQT）</div>
+    <h1>Tiếng Trung của 阳光钱（DQT）</h1>
+    <p>Nói tiếng Trung tự tin hơn, từng chủ đề một 💗</p>
+    <p>Đăng nhập bằng email và mật khẩu. Nếu đây là lần đầu đặt mật khẩu, hãy mở website bằng Safari và dùng link email một lần để thiết lập.</p>
+    <form id="loginForm">
+      <input id="loginEmail" type="email" value="tiengameytb@gmail.com" autocomplete="username" required>
+      <input id="loginPassword" type="password" placeholder="Mật khẩu" autocomplete="current-password" minlength="8" required>
+      <button type="submit" id="loginButton">Đăng nhập bằng mật khẩu</button>
+    </form>
+    <button type="button" id="magicLinkButton" style="margin-top:9px;background:#eee;color:#24352f">Gửi link đăng nhập qua email</button>
+    <div class="auth-status" id="authStatus" role="status"></div>
+  </div>
+</div>
+<div id="appShell">
+<div class="account-bar"><span id="accountEmail"></span><button id="passwordSettingsButton" type="button">Đặt/đổi mật khẩu</button><button id="logoutButton" type="button">Đăng xuất</button></div>
+<div id="passwordSettings" style="display:none;padding:12px 18px;background:#f5f0e8;text-align:right">
+  <input id="newPassword" type="password" minlength="8" autocomplete="new-password" placeholder="Mật khẩu mới (ít nhất 8 ký tự)" style="max-width:280px;padding:10px;border:1px solid #ddd;border-radius:9px">
+  <button id="savePasswordButton" type="button" style="padding:10px;border:0;border-radius:9px;background:#426b56;color:white">Lưu mật khẩu</button>
+  <div id="passwordStatus" class="auth-status" role="status"></div>
+</div>
+<header>
+ <div class="hero"><div class="brand">🐾 阳光钱（DQT） · CHINESE SPEAKING COACH</div><h1>Tiếng Trung của 阳光钱（DQT）<br>Nói tự tin hơn mỗi ngày.</h1><p>🌸 Từng chủ đề một · Cùng 小猫老师 chinh phục HSK 1–6 luyện nói HSK 1–6 🐱</p></div>
+ <div class="streak">🌱 Góc học tập cá nhân<br><b id="doneCount">0 chủ đề đã luyện</b></div>
+</header>
+<main>
+ <div class="intro"><div><h2>Hôm nay bạn muốn nói về điều gì?</h2><p>Mỗi bài có dàn ý, cấu trúc ngữ pháp và câu hỏi mở rộng.</p></div><div class="progress"><span id="progressText">Tiến độ: 0%</span><div class="bar"><span id="progressBar"></span></div></div></div>
+ <div class="layout">
+  <aside class="panel">
+   <h3>01 / Chọn cấp độ HSK</h3>
+   <div class="levels" id="levels">
+    <button class="level active" data-level="1">HSK 1<small>Sơ cấp</small></button><button class="level" data-level="2">HSK 2<small>Sơ cấp</small></button><button class="level" data-level="3">HSK 3<small>Trung cấp</small></button><button class="level" data-level="4">HSK 4<small>Trung cấp</small></button><button class="level" data-level="5">HSK 5<small>Cao cấp</small></button><button class="level" data-level="6">HSK 6<small>Nâng cao</small></button>
+   </div>
+   <h3>02 / Tìm chủ đề</h3><input class="filter" id="search" placeholder="🔎  Tìm chủ đề..." />
+   <div class="topic-list" id="topicList"></div>
+  </aside>
+  <section class="work" aria-live="polite">
+   <div class="topic-head"><div><div class="eyebrow" id="levelLabel">HSK 1 · SPEAKING</div><h2 id="topicTitle">自我介绍</h2><div class="translation" id="topicVi">Giới thiệu bản thân</div></div><div class="pill" id="difficulty">Sơ cấp · 1–2 phút</div></div>
+   <div class="prompt"><label>Câu hỏi trọng tâm</label><div class="question" id="question">请介绍一下你自己。</div><div class="pinyin" id="questionPy">Qǐng jièshào yíxià nǐ zìjǐ.</div><div class="translation" id="questionVi">Hãy giới thiệu đôi chút về bản thân bạn.</div></div>
+   <div class="section-kicker">02 · KIẾN THỨC RIÊNG CHO CHỦ ĐỀ NÀY</div><div class="columns">
+    <div class="mini"><h3>🧩 10 NGỮ PHÁP NÊN VẬN DỤNG</h3><div class="grammar" id="grammar"></div></div>
+    <div class="mini"><h3>🪜 CÁCH TRIỂN KHAI Ý</h3><ol class="outline" id="outline"></ol></div>
+   </div>
+   <div class="mini follow"><h3>💬 CÂU HỎI ĐÀO SÂU</h3><ul id="followups"></ul></div>
+   <div class="section-kicker" style="margin-top:16px">03 · TỪ VỰNG VÀ BÀI NÓI MẪU</div><div class="columns" style="margin-top:8px">
+    <div class="mini"><h3>📚 TỪ VỰNG GỢI Ý NÊN NÓI</h3><div id="vocabSuggestions" class="vocab-chips"></div></div>
+    <div class="mini"><h3>🌸 BÀI NÓI MẪU + CÁCH TRIỂN KHAI</h3><div id="sampleAnswer" class="sample-answer"></div><div id="sampleMeta" class="sample-meta"></div><button class="btn" id="saveStudyBtn" type="button">♡ Lưu từ vựng & ngữ pháp ôn tập</button></div>
+   </div>
+
+   <div class="mini" style="margin-top:14px"><h3>📖 SỔ ÔN TẬP CỦA BẠN</h3><div class="controls"><button class="btn" id="showSavedVocab">Từ vựng đã lưu</button><button class="btn" id="showSavedGrammar">Ngữ pháp đã lưu</button></div><div id="savedStudyList" class="note">Các mục bạn lưu sẽ xuất hiện ở đây.</div></div>
+   <div class="section-kicker" style="margin-top:18px">04 · BẠN TỰ LUYỆN VÀ NHẬN XÉT</div><div class="practice">
+    <div class="practice-top"><h3>🎙️ ĐẾN LƯỢT BẠN NÓI</h3><div class="timer" id="timer">01:30</div></div>
+    <div class="controls"><button class="btn primary" id="startTimer">▶ Bắt đầu luyện</button><button class="btn" id="resetTimer">↺ Đặt lại</button><button class="btn" id="speakQuestion">🔊 Nghe câu hỏi</button><button class="btn" id="markDone">✓ Đánh dấu đã luyện</button></div>
+    <div class="controls"><button class="btn" id="recordBtn">🎤 Nhận diện lời nói</button><button class="btn" id="stopRecord" disabled>Dừng nhận diện</button><button class="btn" id="audioStart">⏺ Thu âm</button><button class="btn" id="audioStop" disabled>■ Dừng thu</button></div><audio id="audioPlayback" controls style="display:none;width:100%;margin:8px 0"></audio>
+    <textarea id="transcript" placeholder="Bản nhận diện giọng nói hoặc ghi chú câu trả lời của bạn sẽ xuất hiện ở đây. Bạn cũng có thể tự nhập câu trả lời..."></textarea>
+    <div class="note">Nhận diện giọng nói cần trình duyệt hỗ trợ (thường hoạt động tốt hơn trên Chrome) và có thể cần cấp quyền microphone. Ghi chú và tiến độ sẽ được đồng bộ trên các thiết bị sau khi kết nối tài khoản.</div>
+    <div class="controls"><button class="btn primary" id="reviewBtn">✨ AI chấm & chữa bài / xem nhận xét</button></div>
+    <div class="mini" id="reviewPanel" style="display:none;margin-top:12px">
+      <h3>📋 NHẬN XÉT BÀI LUYỆN</h3>
+      <div id="reviewResult" class="note" style="font-size:14px;line-height:1.8"></div>
+    </div>
+    <div class="note">Lưu ý: nhận xét hiện tại là tự kiểm tra sơ bộ về độ dài và cách triển khai ý, chưa phải chấm đúng/sai ngữ pháp bằng AI. Nhận diện giọng nói chuyển lời nói thành chữ; chưa đo chính xác thanh điệu hay phát âm.</div>
+    <div class="saved" id="saved"></div>
+   </div>
+  </section>
+  <aside class="ai-rail" id="aiRail">
+    <div class="mini" id="aiConversationCard">
+      <div class="section-kicker">🐾 GIA SƯ ĐỒNG HÀNH</div>
+      <h3 id="rightRailTitle">Hội thoại cùng 小猫老师</h3>
+      <img class="rail-cat" src="dqt-cat-hero.jpg" alt="Mèo chibi học tiếng Trung" />
+      <p class="note">Hai vai trò riêng: AI hỏi – bạn trả lời. Khi cấu hình Gemini API trên Netlify, 小猫老师 sẽ tự động phản hồi câu hỏi và hỏi tiếp linh hoạt theo trình độ của bạn.</p>
+      <div id="chatLog" class="chat-log"><div class="chat-bubble bot">你好！我们来聊聊这个主题吧。你准备好了吗？</div></div>
+      <div class="chat-compose"><input id="chatInput" placeholder="Nhập câu trả lời bằng tiếng Trung..."/><button class="btn primary" id="chatSend">Gửi</button><button class="btn" id="chatMic">🎙</button><button class="btn" id="chatSpeak">🔊</button></div>
+    </div>
+    <div class="mini"><div class="section-kicker">🌸 NHẮC NHỞ HỌC TẬP</div><h3>Học từng chủ đề một</h3><p class="note">Đọc bài mẫu → chọn từ vựng → vận dụng ít nhất 10 ngữ pháp → tự nói → kiểm tra → lưu phần cần ôn.</p><div class="vocab-chips"><span class="vocab-chip">听 · Nghe</span><span class="vocab-chip">说 · Nói</span><span class="vocab-chip">复习 · Ôn tập</span></div></div>
+  </aside>
+ </div>
+ <footer>🐱 阳光钱（DQT） · Học đều đặn, nói tự nhiên, tự tin hơn mỗi ngày. 🌸</footer>
+</main>
+</div><!-- appShell -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+
+// ===== ACCOUNT + CLOUD SYNC =====
+// Fill these two values after creating the Supabase project and running supabase_setup.sql.
+const SUPABASE_URL = "https://gepvgjelaqxnzmznvfrh.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_jediePgDt--fsvaKzbLFVQ_48Zrm2q5";
+const ALLOWED_EMAIL = "tiengameytb@gmail.com";
+const authGate = document.getElementById("authGate");
+const appShell = document.getElementById("appShell");
+const authStatus = document.getElementById("authStatus");
+let cloudClient = null;
+let syncTimer = null;
+let syncingFromCloud = false;
+
+function showLogin(message="") {
+  authGate.style.display = "flex";
+  appShell.style.display = "none";
+  if (message) authStatus.textContent = message;
+}
+function showApp(email) {
+  authGate.style.display = "none";
+  appShell.style.display = "block";
+  document.getElementById("accountEmail").textContent = email;
+}
+function readLearningData() {
+  const data = {};
+  for (let i=0; i<localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && (key === "doneTopics" || key.startsWith("note_") || key.startsWith("study_") || key.startsWith("review_") || key.startsWith("saved_") || key.startsWith("history_") || key === "chat_history")) data[key] = localStorage.getItem(key);
+  }
+  return data;
+}
+async function saveLearningData() {
+  if (!cloudClient || syncingFromCloud) return;
+  const { data: { user } } = await cloudClient.auth.getUser();
+  if (!user || user.email !== ALLOWED_EMAIL) return;
+  const { error } = await cloudClient.from("user_progress").upsert({
+    user_id: user.id, email: user.email, data: readLearningData(), updated_at: new Date().toISOString()
+  }, { onConflict: "user_id" });
+  if (error) console.error("Cloud sync error:", error.message);
+}
+function scheduleCloudSave() {
+  if (syncingFromCloud) return;
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(saveLearningData, 700);
+}
+const originalSetItem = localStorage.setItem.bind(localStorage);
+localStorage.setItem = function(key, value) {
+  originalSetItem(key, value);
+  if (key === "doneTopics" || String(key).startsWith("note_") || String(key).startsWith("study_") || String(key).startsWith("review_") || String(key).startsWith("saved_") || String(key).startsWith("history_") || key === "chat_history") scheduleCloudSave();
+};
+async function loadCloudData() {
+  const { data: { user } } = await cloudClient.auth.getUser();
+  if (!user || user.email !== ALLOWED_EMAIL) {
+    await cloudClient.auth.signOut();
+    showLogin("Email này không được cấp quyền truy cập.");
+    return false;
+  }
+  const { data, error } = await cloudClient.from("user_progress").select("data").eq("user_id", user.id).maybeSingle();
+  if (error) {
+    authStatus.textContent = "Không tải được tiến độ: " + error.message;
+    return false;
+  }
+  syncingFromCloud = true;
+  if (data && data.data) {
+    Object.entries(data.data).forEach(([key,value]) => originalSetItem(key, value));
+  }
+  syncingFromCloud = false;
+  updateProgress();
+  renderTopic();
+  showApp(user.email);
+  return true;
+}
+async function startApp() {
+  if (SUPABASE_URL.includes("PASTE_") || SUPABASE_ANON_KEY.includes("PASTE_")) {
+    showLogin("Website cần được kết nối Supabase trước khi đăng nhập. Xem file README_SETUP.txt trong gói mã nguồn.");
+    return;
+  }
+  cloudClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  document.getElementById("loginForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+    const password = document.getElementById("loginPassword").value;
+    if (email !== ALLOWED_EMAIL) { authStatus.textContent = "Tài khoản này không được cấp quyền."; return; }
+    authStatus.textContent = "Đang kiểm tra email và mật khẩu…";
+    const { error } = await cloudClient.auth.signInWithPassword({ email, password });
+    authStatus.textContent = error ? "Đăng nhập chưa thành công: " + error.message + " Nếu chưa từng đặt mật khẩu, hãy đăng nhập bằng link email một lần trong Safari rồi chọn Đặt/đổi mật khẩu." : "Đăng nhập thành công.";
+  });
+  document.getElementById("magicLinkButton").addEventListener("click", async () => {
+    const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+    if (email !== ALLOWED_EMAIL) { authStatus.textContent = "Tài khoản này không được cấp quyền."; return; }
+    authStatus.textContent = "Đang gửi link đăng nhập…";
+    const { error } = await cloudClient.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin + window.location.pathname } });
+    authStatus.textContent = error ? ("Không gửi được email: " + error.message) : "Đã gửi link đăng nhập. Hãy kiểm tra cả thư rác và quảng cáo.";
+  });
+  document.getElementById("passwordSettingsButton").addEventListener("click", () => {
+    const panel = document.getElementById("passwordSettings");
+    panel.style.display = panel.style.display === "none" ? "block" : "none";
+  });
+  document.getElementById("savePasswordButton").addEventListener("click", async () => {
+    const password = document.getElementById("newPassword").value;
+    const status = document.getElementById("passwordStatus");
+    if (password.length < 8) { status.textContent = "Mật khẩu cần có ít nhất 8 ký tự."; return; }
+    status.textContent = "Đang lưu mật khẩu…";
+    const { error } = await cloudClient.auth.updateUser({ password });
+    status.textContent = error ? "Không lưu được mật khẩu: " + error.message : "Đã đặt mật khẩu thành công. Lần sau bạn có thể đăng nhập bằng email và mật khẩu.";
+    if (!error) document.getElementById("newPassword").value = "";
+  });
+  document.getElementById("logoutButton").addEventListener("click", async () => {
+    await saveLearningData();
+    await cloudClient.auth.signOut();
+    showLogin("Bạn đã đăng xuất.");
+  });
+  cloudClient.auth.onAuthStateChange(async (_event, session) => {
+    if (session) await loadCloudData();
+    else showLogin();
+  });
+  const { data: { session } } = await cloudClient.auth.getSession();
+  if (session) await loadCloudData();
+  else showLogin();
+}
+const topics = [
+{level:1,title:"自我介绍",vi:"Giới thiệu bản thân",q:"请介绍一下你自己。",py:"Qǐng jièshào yíxià nǐ zìjǐ.",qvi:"Hãy giới thiệu đôi chút về bản thân bạn。",time:90,grammar:[["我是……","Tôi là…","我是越南人。我是学生。"],["我叫……","Tôi tên là…","我叫安。"],["喜欢 + danh từ/động từ","Thích…","我喜欢听音乐。"]],outline:["Tên và quê quán của bạn","Bạn hiện là học sinh, sinh viên hay đang đi làm","Một sở thích hoặc điều bạn yêu thích","Một câu kết giới thiệu tính cách"],follow:["你叫什么名字？","你是哪国人？","你喜欢做什么？"]},
+{level:1,title:"我的家人",vi:"Gia đình của tôi",q:"你家有几口人？请介绍一下你的家人。",py:"Nǐ jiā yǒu jǐ kǒu rén? Qǐng jièshào yíxià nǐ de jiārén.",qvi:"Gia đình bạn có mấy người? Hãy giới thiệu gia đình.",time:90,grammar:[["有 + số lượng","Có…","我家有四口人。"],["这是……","Đây là…","这是我的妈妈。"],["很 + tính từ","Rất…","我妈妈很好。"]],outline:["Gia đình có bao nhiêu người","Giới thiệu từng thành viên","Một hoạt động gia đình thường làm cùng nhau"],follow:["你跟谁住在一起？","你最喜欢和家人做什么？"]},
+{level:1,title:"我的一天",vi:"Một ngày của tôi",q:"请说一说你每天的生活。",py:"Qǐng shuō yi shuō nǐ měitiān de shēnghuó.",qvi:"Hãy kể về cuộc sống hằng ngày của bạn.",time:90,grammar:[["先……然后……","Trước tiên… sau đó…","我先吃早饭，然后去学校。"],["时间 + 做什么","Thời gian + làm gì","我七点起床。"],["常常 / 有时候","Thường thường / đôi khi","我常常看书。"]],outline:["Bạn thường thức dậy lúc mấy giờ","Các hoạt động buổi sáng, chiều, tối","Hoạt động yêu thích nhất trong ngày"],follow:["你周末的生活有什么不同？","你觉得自己忙吗？"]},
+{level:2,title:"我的爱好",vi:"Sở thích của tôi",q:"你有什么爱好？为什么喜欢？",py:"Nǐ yǒu shénme àihào? Wèishénme xǐhuan?",qvi:"Bạn có sở thích gì? Vì sao bạn thích?",time:120,grammar:[["除了……以外，还……","Ngoài… ra còn…","除了看书以外，我还喜欢运动。"],["因为……所以……","Bởi vì… nên…","因为很有意思，所以我喜欢。"],["一边……一边……","Vừa… vừa…","我一边听音乐，一边做饭。"]],outline:["Nêu sở thích chính","Bạn bắt đầu từ khi nào","Tần suất và cách bạn thực hiện","Lý do và lợi ích của sở thích"],follow:["你的爱好给你带来了什么？","你想尝试新的爱好吗？"]},
+{level:2,title:"我的朋友",vi:"Bạn bè của tôi",q:"请介绍一个你最好的朋友。",py:"Qǐng jièshào yí ge nǐ zuì hǎo de péngyou.",qvi:"Hãy giới thiệu người bạn thân nhất của bạn.",time:120,grammar:[["跟……一样","Giống với…","我们有一样的爱好。"],["虽然……但是……","Mặc dù… nhưng…","虽然我们很忙，但是常常联系。"],["又……又……","Vừa… vừa…","他又热情又有趣。"]],outline:["Hai bạn quen nhau như thế nào","Ngoại hình hoặc tính cách nổi bật","Một kỷ niệm đáng nhớ","Vì sao bạn trân trọng tình bạn này"],follow:["你们有什么共同点？","你认为好朋友最重要的品质是什么？"]},
+{level:2,title:"一次旅行",vi:"Một chuyến du lịch",q:"说一说你最难忘的一次旅行。",py:"Shuō yi shuō nǐ zuì nánwàng de yí cì lǚxíng.",qvi:"Hãy kể về chuyến du lịch đáng nhớ nhất.",time:120,grammar:[["先……再……最后……","Trước… tiếp đó… cuối cùng…","我们先坐车，再吃饭。"],["比……更……","So với… hơn…","这里比我想象的更漂亮。"],["已经……了","Đã… rồi","我们已经到了。"]],outline:["Đi đâu và đi với ai","Thời gian và phương tiện","Những hoạt động đã trải nghiệm","Điều khiến chuyến đi đáng nhớ"],follow:["如果再去一次，你会做什么？","旅行前你会准备什么？"]},
+{level:3,title:"学习中文的经历",vi:"Trải nghiệm học tiếng Trung",q:"你为什么学习中文？学习过程中遇到过什么困难？",py:"Nǐ wèishénme xuéxí Zhōngwén? Xuéxí guòchéng zhōng yùdào guo shénme kùnnan?",qvi:"Vì sao học tiếng Trung? Bạn từng gặp khó khăn gì?",time:150,grammar:[["对……感兴趣","Có hứng thú với…","我对中国文化很感兴趣。"],["不仅……而且……","Không những… mà còn…","学习中文不仅有趣，而且很有用。"],["通过……来……","Thông qua… để…","我通过看视频来练习听力。"]],outline:["Lý do bắt đầu học tiếng Trung","Khó khăn cụ thể: phát âm, chữ Hán, ngữ pháp","Cách bạn vượt qua","Mục tiêu trong tương lai"],follow:["你认为学习语言最重要的是什么？","如果给初学者建议，你会说什么？"]},
+{level:3,title:"健康的生活方式",vi:"Lối sống lành mạnh",q:"你认为怎样才能保持健康的生活方式？",py:"Nǐ rènwéi zěnyàng cái néng bǎochí jiànkāng de shēnghuó fāngshì?",qvi:"Theo bạn làm thế nào để duy trì lối sống lành mạnh?",time:150,grammar:[["只有……才……","Chỉ khi… thì mới…","只有坚持运动，才能保持健康。"],["除了……还……","Ngoài… còn…","除了运动，还要注意饮食。"],["与其……不如……","Thay vì… chi bằng…","与其熬夜，不如早点休息。"]],outline:["Giải thích thế nào là sống lành mạnh","Ăn uống và vận động","Giấc ngủ và sức khỏe tinh thần","Đề xuất thói quen dễ thực hiện"],follow:["现代人的生活方式有哪些问题？","工作忙的时候如何照顾自己？"]},
+{level:3,title:"网络与生活",vi:"Internet và cuộc sống",q:"互联网给我们的生活带来了哪些变化？",py:"Hùliánwǎng gěi wǒmen de shēnghuó dàilái le nǎxiē biànhuà?",qvi:"Internet đã đem đến những thay đổi nào cho cuộc sống?",time:150,grammar:[["使 / 让 + người + động từ","Khiến / làm cho…","网络让沟通变得更方便。"],["一方面……另一方面……","Một mặt… mặt khác…","一方面很方便，另一方面也有风险。"],["越来越……","Ngày càng…","人们越来越依赖网络。"]],outline:["Nêu vai trò của Internet","Lợi ích trong học tập, công việc, liên lạc","Mặt trái hoặc rủi ro","Quan điểm và cách sử dụng hợp lý"],follow:["你每天上网多长时间？","如何避免沉迷网络？"]},
+{level:4,title:"工作与生活的平衡",vi:"Cân bằng công việc và cuộc sống",q:"你认为应该如何平衡工作和个人生活？",py:"Nǐ rènwéi yīnggāi rúhé pínghéng gōngzuò hé gèrén shēnghuó?",qvi:"Theo bạn nên cân bằng công việc và cuộc sống cá nhân thế nào?",time:180,grammar:[["与其……倒不如……","Thay vì… thì thà…","与其一味加班，倒不如提高效率。"],["既然……就……","Đã… thì…","既然选择了这份工作，就要认真负责。"],["在……的同时……","Trong khi… đồng thời…","在努力工作的同时，也要照顾健康。"]],outline:["Giải thích khái niệm cân bằng","Nguyên nhân khiến con người mất cân bằng","Giải pháp ở cấp độ cá nhân và nơi làm việc","Quan điểm kết luận"],follow:["公司应该为员工做些什么？","你愿意为了事业牺牲私人时间吗？"]},
+{level:4,title:"教育方式的变化",vi:"Sự thay đổi trong phương pháp giáo dục",q:"你觉得传统教育和现代教育各有什么优缺点？",py:"Nǐ juéde chuántǒng jiàoyù hé xiàndài jiàoyù gè yǒu shénme yōudiǎn quēdiǎn?",qvi:"Giáo dục truyền thống và hiện đại có ưu nhược điểm gì?",time:180,grammar:[["相比较而言……","So sánh mà nói…","相比较而言，现代教育更灵活。"],["固然……但是……","Quả thực… nhưng…","传统方法固然有效，但是也有局限。"],["关键在于……","Mấu chốt nằm ở…","关键在于如何培养独立思考。"]],outline:["Định nghĩa hai phương pháp","So sánh ưu điểm và hạn chế","Đưa ví dụ từ trải nghiệm","Đề xuất mô hình kết hợp"],follow:["考试成绩能代表学习能力吗？","教师在未来会扮演什么角色？"]},
+{level:4,title:"文化差异",vi:"Khác biệt văn hóa",q:"你曾经遇到过哪些文化差异？你是如何适应的？",py:"Nǐ céngjīng yùdào guo nǎxiē wénhuà chāyì? Nǐ shì rúhé shìyìng de?",qvi:"Bạn từng gặp khác biệt văn hóa nào và thích nghi ra sao?",time:180,grammar:[["与其说……不如说……","Nói là… chi bằng nói là…","与其说是差异，不如说是不同的习惯。"],["难免……","Khó tránh khỏi…","刚到国外，难免会感到不习惯。"],["随着……","Cùng với…","随着交流增加，我逐渐理解了当地文化。"]],outline:["Nêu tình huống cụ thể","Mô tả khác biệt và phản ứng ban đầu","Cách tìm hiểu, điều chỉnh","Bài học về tôn trọng văn hóa"],follow:["文化差异会造成误解吗？","怎样才能更好地理解不同文化？"]},
+{level:5,title:"人工智能对社会的影响",vi:"Ảnh hưởng của trí tuệ nhân tạo đối với xã hội",q:"人工智能的发展会给社会带来怎样的机遇与挑战？",py:"Réngōng zhìnéng de fāzhǎn huì gěi shèhuì dàilái zěnyàng de jīyù yǔ tiǎozhàn?",qvi:"Sự phát triển AI đem lại cơ hội và thách thức nào?",time:240,grammar:[["不可否认的是……","Không thể phủ nhận rằng…","不可否认的是，人工智能提高了效率。"],["从长远来看……","Xét về lâu dài…","从长远来看，教育体系也需要改变。"],["倘若……那么……","Nếu giả sử… thì…","倘若缺乏监管，那么风险可能扩大。"]],outline:["Định nghĩa và bối cảnh phát triển","Cơ hội: năng suất, y tế, giáo dục","Thách thức: việc làm, quyền riêng tư, thiên lệch","Đề xuất quản trị và kết luận cân bằng"],follow:["人工智能能否完全取代人类？","个人应该如何为技术变化做准备？"]},
+{level:5,title:"消费主义与幸福感",vi:"Chủ nghĩa tiêu dùng và cảm giác hạnh phúc",q:"你认为物质条件与幸福感之间有什么关系？",py:"Nǐ rènwéi wùzhì tiáojiàn yǔ xìngfúgǎn zhījiān yǒu shénme guānxì?",qvi:"Theo bạn điều kiện vật chất và hạnh phúc có quan hệ thế nào?",time:240,grammar:[["并不意味着……","Không đồng nghĩa với…","拥有更多并不意味着更幸福。"],["归根结底……","Suy cho cùng…","归根结底，幸福来自多方面。"],["与……相比……","So với…","与物质相比，关系和健康同样重要。"]],outline:["Làm rõ khái niệm hạnh phúc","Vai trò thực tế của vật chất","Ảnh hưởng của tiêu dùng quá mức","Đề xuất cách xác định nhu cầu và giá trị"],follow:["社交媒体如何影响人们的消费观？","你如何判断什么是真正需要的？"]},
+{level:5,title:"全球化与本土文化",vi:"Toàn cầu hóa và văn hóa bản địa",q:"在全球化的背景下，如何保护本土文化？",py:"Zài quánqiúhuà de bèijǐng xià, rúhé bǎohù běntǔ wénhuà?",qvi:"Trong bối cảnh toàn cầu hóa, làm sao bảo vệ văn hóa bản địa?",time:240,grammar:[["在……背景下……","Trong bối cảnh…","在全球化背景下，文化交流更加频繁。"],["既要……又要……","Vừa cần… vừa cần…","既要开放交流，又要保护传统。"],["唯有……才能……","Chỉ có… mới có thể…","唯有代际传承，才能延续文化。"]],outline:["Tác động hai chiều của toàn cầu hóa","Nguy cơ đồng nhất văn hóa","Vai trò giáo dục, cộng đồng, chính sách","Giải pháp kết hợp bảo tồn và đổi mới"],follow:["商业化会损害传统文化吗？","年轻一代应该承担什么责任？"]},
+{level:6,title:"科技进步与伦理边界",vi:"Tiến bộ công nghệ và giới hạn đạo đức",q:"当科技发展与伦理原则发生冲突时，应该如何取舍？",py:"Dāng kējì fāzhǎn yǔ lúnlǐ yuánzé fāshēng chōngtū shí, yīnggāi rúhé qǔshě?",qvi:"Khi tiến bộ công nghệ xung đột với nguyên tắc đạo đức, nên lựa chọn thế nào?",time:300,grammar:[["毋庸置疑……","Không cần bàn cãi…","毋庸置疑，科技改善了生活。"],["倘若缺乏……势必……","Nếu thiếu… ắt sẽ…","倘若缺乏监督，势必引发滥用。"],["归根结底，问题的核心在于……","Suy cho cùng, cốt lõi vấn đề nằm ở…","问题的核心在于责任如何界定。"]],outline:["Xác định xung đột và các bên liên quan","Phân tích lợi ích và nguy cơ","Đặt ra nguyên tắc: quyền con người, minh bạch, trách nhiệm","Đề xuất cơ chế giám sát và kết luận có điều kiện"],follow:["谁应该为技术造成的后果负责？","伦理规则是否应该先于创新？"]},
+{level:6,title:"个人自由与社会责任",vi:"Tự do cá nhân và trách nhiệm xã hội",q:"个人自由与社会责任之间应当如何取得平衡？",py:"Gèrén zìyóu yǔ shèhuì zérèn zhījiān yīngdāng rúhé qǔdé pínghéng?",qvi:"Cần cân bằng tự do cá nhân và trách nhiệm xã hội thế nào?",time:300,grammar:[["固然……却不能因此……","Quả thực… nhưng không thể vì thế mà…","自由固然重要，却不能因此忽视他人权益。"],["在不损害……的前提下……","Với điều kiện không làm tổn hại…","在不损害公共利益的前提下，应尊重选择。"],["这并非……而是……","Điều này không phải… mà là…","这并非限制自由，而是明确边界。"]],outline:["Định nghĩa tự do và trách nhiệm","Phân tích xung đột trong đời sống","Nêu tiêu chí xác định giới hạn hợp lý","Đưa ví dụ và đề xuất nguyên tắc cân bằng"],follow:["法律与道德在其中分别起什么作用？","多数人的利益是否总应优先？"]},
+{level:6,title:"教育的本质与终身学习",vi:"Bản chất giáo dục và học tập suốt đời",q:"在快速变化的时代，教育的本质是否需要重新定义？",py:"Zài kuàisù biànhuà de shídài, jiàoyù de běnzhì shìfǒu xūyào chóngxīn dìngyì?",qvi:"Trong thời đại biến đổi nhanh, có cần định nghĩa lại bản chất giáo dục?",time:300,grammar:[["与其将……视为……不如……","Thay vì xem… là… chi bằng…","与其将教育视为考试，不如看作能力培养。"],["不仅关乎……更关乎……","Không chỉ liên quan… mà còn…","教育不仅关乎知识，更关乎判断力。"],["从根本上说……","Xét từ căn bản…","从根本上说，学习是一种持续适应。"]],outline:["Nêu quan niệm giáo dục truyền thống","Phân tích biến đổi của xã hội và tri thức","Trình bày năng lực cốt lõi cần phát triển","Đề xuất vai trò của học tập suốt đời"],follow:["知识与能力哪个更重要？","教育应该培养怎样的公民？"]},
+{"level": 1, "title": "我的学校", "vi": "Trường học của tôi", "q": "你在哪儿学习？请介绍一下你的学校。", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的老师", "vi": "Thầy cô của tôi", "q": "请介绍一位你喜欢的老师。", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我喜欢的食物", "vi": "Món ăn yêu thích", "q": "你最喜欢吃什么？为什么？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的房间", "vi": "Phòng của tôi", "q": "请介绍一下你的房间。", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我喜欢的季节", "vi": "Mùa yêu thích", "q": "你最喜欢哪个季节？为什么？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "天气", "vi": "Thời tiết", "q": "你喜欢什么天气？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "买东西", "vi": "Mua sắm", "q": "你平时喜欢买什么东西？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的周末", "vi": "Cuối tuần của tôi", "q": "你周末通常做什么？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "在餐厅吃饭", "vi": "Ăn ở nhà hàng", "q": "你去餐厅时通常点什么菜？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的城市", "vi": "Thành phố của tôi", "q": "请介绍一下你住的城市。", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的生日", "vi": "Sinh nhật của tôi", "q": "你怎么过生日？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我喜欢的动物", "vi": "Động vật yêu thích", "q": "你喜欢什么动物？请说一说。", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的手机", "vi": "Điện thoại của tôi", "q": "你每天用手机做什么？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "运动", "vi": "Thể thao", "q": "你喜欢什么运动？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的中文课", "vi": "Lớp tiếng Trung của tôi", "q": "请说一说你的中文课。", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "交通工具", "vi": "Phương tiện giao thông", "q": "你平时怎么去学校或公司？", "py": "", "qvi": "", "time": 90},
+{"level": 1, "title": "我的一天", "vi": "Một ngày của tôi", "q": "你今天做了什么？", "py": "", "qvi": "", "time": 90},
+{"level": 2, "title": "我的家乡", "vi": "Quê hương", "q": "请介绍你的家乡以及那里最有名的地方。", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "一次购物经历", "vi": "Một lần mua sắm", "q": "说一说你印象最深的一次购物经历。", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "我喜欢的电影", "vi": "Bộ phim yêu thích", "q": "介绍一部你喜欢的电影，并说明原因。", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "学会做饭", "vi": "Học nấu ăn", "q": "你会做什么菜？你是怎么学会的？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "搬家经历", "vi": "Trải nghiệm chuyển nhà", "q": "你搬过家吗？请说说那次经历。", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "公共交通", "vi": "Giao thông công cộng", "q": "你认为公共交通方便吗？为什么？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "保护环境", "vi": "Bảo vệ môi trường", "q": "我们可以怎样保护环境？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "节日与习俗", "vi": "Lễ hội và phong tục", "q": "介绍一个你最喜欢的节日。", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "网购", "vi": "Mua hàng trực tuyến", "q": "你喜欢网上购物还是去商店购物？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "理想的房子", "vi": "Ngôi nhà lý tưởng", "q": "你理想中的房子是什么样的？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "一次难忘的聚会", "vi": "Buổi tụ họp đáng nhớ", "q": "说一说一次让你难忘的聚会。", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "时间管理", "vi": "Quản lý thời gian", "q": "你怎样安排自己的时间？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "学习计划", "vi": "Kế hoạch học tập", "q": "你最近有什么学习计划？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "宠物", "vi": "Thú cưng", "q": "你觉得养宠物有什么好处和困难？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "旅游计划", "vi": "Kế hoạch du lịch", "q": "如果有假期，你最想去哪里？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "运动的好处", "vi": "Lợi ích thể thao", "q": "运动对我们的生活有什么帮助？", "py": "", "qvi": "", "time": 120},
+{"level": 2, "title": "帮助别人", "vi": "Giúp đỡ người khác", "q": "说一说你帮助别人或得到帮助的经历。", "py": "", "qvi": "", "time": 120},
+{"level": 3, "title": "职业选择", "vi": "Lựa chọn nghề nghiệp", "q": "选择职业时，你最看重哪些因素？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "远程办公", "vi": "Làm việc từ xa", "q": "你怎么看待远程办公这种工作方式？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "社交媒体", "vi": "Mạng xã hội", "q": "社交媒体对人际关系有什么影响？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "城市生活与乡村生活", "vi": "Thành thị và nông thôn", "q": "城市生活和乡村生活各有什么优缺点？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "失败的经验", "vi": "Kinh nghiệm thất bại", "q": "失败能给人带来哪些成长？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "团队合作", "vi": "Làm việc nhóm", "q": "怎样才能提高团队合作的效率？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "语言学习方法", "vi": "Phương pháp học ngoại ngữ", "q": "你认为最有效的语言学习方法是什么？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "旅游与文化", "vi": "Du lịch và văn hóa", "q": "旅游怎样帮助人们了解不同文化？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "环境污染", "vi": "Ô nhiễm môi trường", "q": "环境污染的主要原因和解决办法是什么？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "消费习惯", "vi": "Thói quen tiêu dùng", "q": "你的消费习惯这些年有什么变化？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "压力与情绪", "vi": "Áp lực và cảm xúc", "q": "面对压力时，你通常怎样调整自己？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "阅读的价值", "vi": "Giá trị của việc đọc", "q": "在数字时代，阅读还有什么价值？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "志愿服务", "vi": "Hoạt động tình nguyện", "q": "你认为年轻人为什么应该参加志愿服务？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "成功的定义", "vi": "Định nghĩa thành công", "q": "你怎样理解成功？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "网络学习", "vi": "Học trực tuyến", "q": "网络学习能否代替传统课堂？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "代际沟通", "vi": "Giao tiếp giữa các thế hệ", "q": "年轻人和长辈怎样才能更好地沟通？", "py": "", "qvi": "", "time": 150},
+{"level": 3, "title": "时间与效率", "vi": "Thời gian và hiệu suất", "q": "忙碌是否一定意味着效率高？", "py": "", "qvi": "", "time": 150},
+{"level": 4, "title": "职业发展与个人价值", "vi": "Phát triển nghề nghiệp và giá trị cá nhân", "q": "职业发展应该优先考虑收入还是个人价值？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "人口老龄化", "vi": "Già hóa dân số", "q": "人口老龄化会给社会带来哪些挑战？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "教育公平", "vi": "Công bằng giáo dục", "q": "怎样才能让不同背景的孩子获得公平的教育机会？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "城市规划", "vi": "Quy hoạch đô thị", "q": "理想的城市规划应该考虑哪些方面？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "传统文化的传承", "vi": "Bảo tồn văn hóa truyền thống", "q": "如何让传统文化在现代社会继续发展？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "信息过载", "vi": "Quá tải thông tin", "q": "信息过载如何影响人们的判断能力？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "工作中的沟通", "vi": "Giao tiếp nơi công sở", "q": "有效沟通对团队和组织为什么如此重要？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "旅游业的影响", "vi": "Tác động ngành du lịch", "q": "旅游业发展应该如何兼顾经济与环境？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "食品安全", "vi": "An toàn thực phẩm", "q": "政府、企业和消费者应如何保障食品安全？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "住房问题", "vi": "Vấn đề nhà ở", "q": "大城市应该如何应对住房负担过重的问题？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "媒体责任", "vi": "Trách nhiệm truyền thông", "q": "媒体在传播信息时应承担哪些社会责任？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "创新与风险", "vi": "Đổi mới và rủi ro", "q": "创新过程中应该怎样管理风险？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "公共健康", "vi": "Sức khỏe cộng đồng", "q": "改善公共健康需要个人和社会做出哪些努力？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "跨文化交流", "vi": "Giao lưu liên văn hóa", "q": "跨文化交流中怎样避免误解和偏见？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "可持续发展", "vi": "Phát triển bền vững", "q": "经济增长与可持续发展能否同时实现？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "人才流动", "vi": "Dịch chuyển nhân lực", "q": "人才流动对地区发展有什么影响？", "py": "", "qvi": "", "time": 180},
+{"level": 4, "title": "网络隐私", "vi": "Quyền riêng tư trên mạng", "q": "在数字社会中，个人应该如何保护隐私？", "py": "", "qvi": "", "time": 180},
+{"level": 5, "title": "算法与个人选择", "vi": "Thuật toán và lựa chọn cá nhân", "q": "算法推荐在多大程度上影响了个人选择？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "数字鸿沟", "vi": "Khoảng cách số", "q": "如何缩小不同群体之间的数字鸿沟？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "全球供应链", "vi": "Chuỗi cung ứng toàn cầu", "q": "全球供应链面临哪些风险，又该如何增强韧性？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "企业社会责任", "vi": "Trách nhiệm xã hội doanh nghiệp", "q": "企业追求利润时应如何履行社会责任？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "气候变化与政策", "vi": "Biến đổi khí hậu và chính sách", "q": "应对气候变化需要怎样的国际合作与政策？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "知识产权保护", "vi": "Bảo vệ sở hữu trí tuệ", "q": "如何在鼓励创新与保护知识产权之间取得平衡？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "人口迁移", "vi": "Di cư dân số", "q": "人口迁移会怎样改变城市和乡村的发展格局？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "自动化与就业", "vi": "Tự động hóa và việc làm", "q": "自动化浪潮下，劳动者应如何提升竞争力？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "科学传播", "vi": "Truyền thông khoa học", "q": "怎样提高公众识别科学信息与伪科学的能力？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "文化产业", "vi": "Công nghiệp văn hóa", "q": "文化产业商业化会促进还是削弱文化创造力？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "隐私与便利", "vi": "Quyền riêng tư và tiện ích", "q": "为了生活便利而提供个人数据，边界应该在哪里？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "社会信任", "vi": "Niềm tin xã hội", "q": "社会信任是如何建立的，又为何容易受到损害？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "平台经济", "vi": "Kinh tế nền tảng", "q": "平台经济如何改变劳动关系与市场竞争？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "教育评价体系", "vi": "Hệ thống đánh giá giáo dục", "q": "单一考试评价体系有哪些局限，应如何改革？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "资源分配", "vi": "Phân bổ nguồn lực", "q": "公共资源分配应优先考虑效率还是公平？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "科技与人文", "vi": "Công nghệ và nhân văn", "q": "科技发展为什么需要人文精神的引导？", "py": "", "qvi": "", "time": 240},
+{"level": 5, "title": "国际合作", "vi": "Hợp tác quốc tế", "q": "面对跨国问题，国际合作为何常常困难重重？", "py": "", "qvi": "", "time": 240},
+{"level": 6, "title": "技术治理与公共利益", "vi": "Quản trị công nghệ và lợi ích công", "q": "在技术快速迭代的背景下，如何建立兼顾创新与公共利益的治理框架？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "民主决策与专家意见", "vi": "Quyết sách dân chủ và ý kiến chuyên gia", "q": "公共决策应如何协调民主参与与专业判断之间的张力？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "经济增长的边界", "vi": "Giới hạn của tăng trưởng kinh tế", "q": "衡量社会进步是否应超越国内生产总值等传统经济指标？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "全球正义", "vi": "Công lý toàn cầu", "q": "全球化收益与成本分配不均时，国际社会应承担何种责任？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "人工智能与主体性", "vi": "AI và tính chủ thể", "q": "人工智能日益参与决策，人类主体性应如何得到保障？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "代际正义", "vi": "Công bằng giữa các thế hệ", "q": "当代社会应如何在满足当前需求与维护后代权益之间作出抉择？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "言论自由的边界", "vi": "Giới hạn tự do ngôn luận", "q": "言论自由与防止公共伤害之间应建立怎样的边界？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "数据所有权", "vi": "Quyền sở hữu dữ liệu", "q": "个人数据的控制权、使用权和收益权应如何界定？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "文化身份与开放社会", "vi": "Bản sắc văn hóa và xã hội cởi mở", "q": "开放社会如何在接纳多元文化的同时维系共同身份？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "风险社会", "vi": "Xã hội rủi ro", "q": "面对难以预测的系统性风险，公共机构应如何提升韧性？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "知识与权力", "vi": "Tri thức và quyền lực", "q": "知识生产过程中的权力结构会怎样影响社会认知？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "技术伦理的国际标准", "vi": "Chuẩn mực đạo đức công nghệ quốc tế", "q": "不同文化与制度背景下，是否可能形成普遍适用的技术伦理标准？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "市场机制与社会公平", "vi": "Cơ chế thị trường và công bằng xã hội", "q": "市场机制在何种条件下能够促进公平，又会在何处失灵？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "历史记忆与公共叙事", "vi": "Ký ức lịch sử và diễn ngôn công cộng", "q": "社会应如何处理彼此冲突的历史记忆与公共叙事？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "教育与社会流动", "vi": "Giáo dục và dịch chuyển xã hội", "q": "教育在促进社会流动方面的作用是否被高估？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "生态文明", "vi": "Văn minh sinh thái", "q": "生态文明理念要求我们重新审视哪些生产与生活方式？", "py": "", "qvi": "", "time": 300},
+{"level": 6, "title": "责任伦理", "vi": "Đạo đức trách nhiệm", "q": "在后果复杂且责任分散的现代社会，责任应如何归属？", "py": "", "qvi": "", "time": 300}
+];
+const grammarBanks = {"1": [["是……", "Là…", "我是学生。"], ["叫……", "Tên là…", "我叫小明。"], ["有……", "Có…", "我有一个姐姐。"], ["在……", "Ở / tại…", "我在家。"], ["喜欢……", "Thích…", "我喜欢喝茶。"], ["想……", "Muốn…", "我想学中文。"], ["会……", "Biết / có thể…", "我会说一点儿中文。"], ["不 / 没有", "Không / chưa có", "我不喝咖啡。"], ["很 + tính từ", "Rất…", "今天很热。"], ["和……一起", "Cùng với…", "我和朋友一起吃饭。"], ["几 / 多少", "Hỏi số lượng", "你家有几口人？"], ["这 / 那", "Này / kia", "这是我的书。"]], "2": [["因为……所以……", "Bởi vì… nên…", "因为下雨，所以我坐车。"], ["虽然……但是……", "Mặc dù… nhưng…", "虽然很累，但是我很开心。"], ["一边……一边……", "Vừa… vừa…", "我一边听音乐，一边做饭。"], ["先……然后……", "Trước… rồi…", "我先吃饭，然后学习。"], ["比……", "So sánh hơn", "今天比昨天冷。"], ["越来越……", "Ngày càng…", "中文越来越有意思。"], ["已经……了", "Đã… rồi", "我已经做完了。"], ["如果……就……", "Nếu… thì…", "如果有时间，我就去。"], ["除了……以外，还……", "Ngoài… còn…", "除了中文，我还学英语。"], ["要是……就……", "Nếu… thì…", "要是下雨，我们就不去。"], ["又……又……", "Vừa… vừa…", "她又聪明又热情。"], ["过", "Từng trải nghiệm", "我去过北京。"]], "3": [["不仅……而且……", "Không những… mà còn…", "运动不仅强身，而且能减压。"], ["只有……才……", "Chỉ khi… mới…", "只有坚持，才能进步。"], ["只要……就……", "Chỉ cần… thì…", "只要努力，就会有收获。"], ["即使……也……", "Cho dù… cũng…", "即使很忙，也要休息。"], ["对……来说", "Đối với…", "对我来说，健康最重要。"], ["把 + tân ngữ + động từ", "Câu chữ 把", "请把门关上。"], ["被 + động từ", "Câu bị động 被", "我的手机被弟弟拿走了。"], ["越来越……", "Ngày càng…", "生活变得越来越方便。"], ["一方面……另一方面……", "Một mặt… mặt khác…", "一方面省钱，另一方面省时间。"], ["通过……来……", "Thông qua… để…", "我通过阅读来提高词汇量。"], ["既……又……", "Vừa… vừa…", "这项工作既有趣又有挑战。"], ["不但不……反而……", "Không những không… trái lại…", "他不但不生气，反而笑了。"]], "4": [["既然……就……", "Đã… thì…", "既然决定了，就坚持下去。"], ["与其……不如……", "Thay vì… chi bằng…", "与其抱怨，不如行动。"], ["尽管……还是……", "Mặc dù… vẫn…", "尽管困难很多，我们还是完成了。"], ["无论……都……", "Dù… đều…", "无论遇到什么，都要冷静。"], ["除非……否则……", "Trừ khi… nếu không…", "除非努力，否则难以成功。"], ["随着……", "Cùng với…", "随着科技发展，生活改变了。"], ["在……的同时……", "Trong khi… đồng thời…", "在工作的同时，也要学习。"], ["从而……", "Từ đó…", "改善交通，从而减少污染。"], ["所谓……就是……", "Cái gọi là… chính là…", "所谓效率，就是合理利用时间。"], ["之所以……是因为……", "Sở dĩ… là vì…", "我之所以选择这里，是因为环境好。"], ["不管……都……", "Bất kể… đều…", "不管多忙，都要锻炼。"], ["反而……", "Ngược lại…", "过度担心反而影响表现。"]], "5": [["不可否认……", "Không thể phủ nhận…", "不可否认，技术带来便利。"], ["从长远来看……", "Xét về lâu dài…", "从长远来看，教育投资很重要。"], ["倘若……那么……", "Giả sử nếu… thì…", "倘若缺乏监管，那么风险会增加。"], ["归根结底……", "Suy cho cùng…", "归根结底，关键在于执行。"], ["不仅如此……", "Không chỉ vậy…", "不仅如此，还应完善制度。"], ["相较于……", "So với…", "相较于成本，质量更值得关注。"], ["鉴于……", "Xét thấy…", "鉴于实际情况，我们调整计划。"], ["有必要……", "Cần thiết phải…", "有必要建立监督机制。"], ["一旦……便……", "Một khi… thì…", "一旦失去信任，便难以恢复。"], ["既要……又要……", "Vừa phải… vừa phải…", "既要提高效率，又要保障公平。"], ["换言之……", "Nói cách khác…", "换言之，发展不能只看速度。"], ["归纳而言……", "Khái quát lại…", "归纳而言，合作至关重要。"]], "6": [["毋庸置疑……", "Không cần bàn cãi…", "毋庸置疑，制度设计影响深远。"], ["倘若缺乏……势必……", "Nếu thiếu… ắt sẽ…", "倘若缺乏问责，势必导致权力滥用。"], ["在不损害……的前提下……", "Với điều kiện không tổn hại…", "在不损害隐私的前提下推动创新。"], ["与其说……不如说……", "Nói là… chi bằng nói là…", "与其说是技术问题，不如说是治理问题。"], ["固然……却不能因此……", "Quả thực… nhưng không thể vì thế…", "效率固然重要，却不能因此牺牲公平。"], ["问题的症结在于……", "Căn nguyên vấn đề nằm ở…", "问题的症结在于责任界定不清。"], ["这并非……而是……", "Đây không phải… mà là…", "这并非限制创新，而是明确底线。"], ["倘若……则不免……", "Nếu… thì khó tránh…", "倘若规则滞后，则不免出现漏洞。"], ["从制度层面而言……", "Xét từ góc độ thể chế…", "从制度层面而言，应完善审查程序。"], ["在某种程度上……", "Ở một mức độ nào đó…", "在某种程度上，风险无法完全消除。"], ["有鉴于此……", "Vì lẽ đó…", "有鉴于此，必须采取预防措施。"], ["归根结底，核心并非……而在于……", "Cốt lõi không phải… mà nằm ở…", "核心并非技术本身，而在于如何使用。"]]};
+topics.forEach(t => {
+  const bank = grammarBanks[t.level] || [];
+  const current = Array.isArray(t.grammar) ? t.grammar.slice() : [];
+  const seen = new Set(current.map(g => g[0]));
+  for (const item of bank) { if (current.length >= 10) break; if (!seen.has(item[0])) { current.push(item); seen.add(item[0]); } }
+  t.grammar = current.slice(0, 10);
+});
+
+let currentLevel=1,currentTopic=topics[0],seconds=90,interval=null,recognition=null;
+const $=id=>document.getElementById(id);
+const vocabBanks={1:[['名字','míngzi','tên'],['来自','láizì','đến từ'],['喜欢','xǐhuan','thích'],['家人','jiārén','gia đình'],['朋友','péngyou','bạn bè']],2:[['经历','jīnglì','trải nghiệm'],['习惯','xíguàn','thói quen'],['方便','fāngbiàn','thuận tiện'],['影响','yǐngxiǎng','ảnh hưởng'],['安排','ānpái','sắp xếp']],3:[['提高','tígāo','nâng cao'],['坚持','jiānchí','kiên trì'],['原因','yuányīn','nguyên nhân'],['解决','jiějué','giải quyết'],['适应','shìyìng','thích nghi']],4:[['平衡','pínghéng','cân bằng'],['效率','xiàolǜ','hiệu suất'],['观点','guāndiǎn','quan điểm'],['措施','cuòshī','biện pháp'],['逐渐','zhújiàn','dần dần']],5:[['趋势','qūshì','xu hướng'],['挑战','tiǎozhàn','thách thức'],['资源','zīyuán','nguồn lực'],['社会','shèhuì','xã hội'],['承担','chéngdān','đảm nhận']],6:[['本质','běnzhì','bản chất'],['权衡','quánhéng','cân nhắc'],['伦理','lúnlǐ','đạo đức'],['界限','jièxiàn','ranh giới'],['可持续','kě chíxù','bền vững']]};
+function vocabForTopic(){let bank=vocabBanks[currentTopic.level]||vocabBanks[1];let titleWords=currentTopic.title.match(/[㐀-鿿]{2,4}/g)||[];return [...titleWords.slice(0,2).map(w=>[w,'','từ khóa chủ đề']),...bank].slice(0,7)}
+function renderStudyExtras(){
+ let words=vocabForTopic();
+ $('vocabSuggestions').innerHTML=words.map((w,i)=>`<label class="vocab-chip" style="display:inline-flex;gap:6px;align-items:center"><input type="checkbox" data-save-type="vocab" data-save-index="${i}" ${isSaved('vocab',w[0])?'checked':''}><span><b>${w[0]}</b><br><small>${w[1]||'Từ khóa chủ đề'} · ${w[2]}</small></span></label>`).join('');
+ let patterns=currentTopic.grammar.slice(0,5).map(g=>g[0]).join('、');
+ let examples=currentTopic.grammar.slice(0,4).map(g=>g[2]).filter(Boolean);
+ let sample='';
+ if(currentTopic.level<=2){
+   sample=`关于“${currentTopic.vi}”，我想简单介绍一下。${examples[0]||'我觉得这个话题很有意思。'}${examples[1]||'我平时会和朋友一起分享。'}${examples[2]||'因为它对我很重要，所以我很喜欢。'}最后，我希望以后能做得更好。`;
+ }else if(currentTopic.level<=4){
+   sample=`关于“${currentTopic.vi}”，我认为这是一个值得认真讨论的话题。首先，${examples[0]||'我们应该了解它的基本情况。'}其次，${examples[1]||'我们还需要考虑实际生活中的影响。'}例如，${examples[2]||'这在日常生活中很常见。'}除此之外，${examples[3]||'我们也应该从不同角度思考。'}因此，我认为应该结合实际情况，采取合适的方法。`;
+ }else{
+   sample=`谈到“${currentTopic.vi}”，我认为不能只从单一角度看待这一问题。首先，${examples[0]||'我们需要明确问题产生的背景与原因。'}。其次，${examples[1]||'还应当综合考虑不同群体所受到的影响。'}。举例来说，${examples[2]||'现实案例能够帮助我们进一步理解这一现象。'}。与此同时，${examples[3]||'制度与个人行动也需要相互配合。'}。归根结底，关键在于在充分分析的基础上提出可行、平衡且具有长期价值的解决方案。`;
+ }
+ $('sampleAnswer').textContent=sample;
+ let meta=document.getElementById('sampleMeta'); if(meta)meta.textContent='Bài mẫu được ghép theo chủ đề và các ví dụ ngữ pháp của cấp độ này. Hãy thay thông tin bằng trải nghiệm thật của bạn. Ngữ pháp có thể vận dụng: '+patterns;
+}
+
+function savedItems(){try{return JSON.parse(localStorage.getItem('saved_items')||'[]')}catch(e){return []}}
+function isSaved(type,label){return savedItems().some(x=>x.type===type&&x.topic===currentTopic.title&&x.label===label)}
+function toggleSaved(type,label,checked,detail){let a=savedItems().filter(x=>!(x.type===type&&x.topic===currentTopic.title&&x.label===label));if(checked)a.push({type,label,detail,topic:currentTopic.title,vi:currentTopic.vi,level:currentTopic.level,at:new Date().toISOString(),remembered:false});localStorage.setItem('saved_items',JSON.stringify(a));showSaved(type);}
+document.addEventListener('change',e=>{const el=e.target;if(el.matches('[data-save-type]')){const type=el.dataset.saveType,idx=+el.dataset.saveIndex;const item=type==='grammar'?currentTopic.grammar[idx]:vocabForTopic()[idx];toggleSaved(type,item[0],el.checked,item.slice(1).join(' · '));}});
+function saveStudy(){vocabForTopic().forEach(w=>toggleSaved('vocab',w[0],true,w.slice(1).join(' · ')));currentTopic.grammar.forEach(g=>toggleSaved('grammar',g[0],true,g.slice(1).join(' · ')));$('saved').textContent='♡ Đã lưu các mục của chủ đề vào sổ ôn tập và đồng bộ khi đăng nhập.';renderTopic();showSaved('all');}
+function showSaved(type){let entries=savedItems().filter(x=>type==='all'||x.type===type);if(!entries.length){$('savedStudyList').textContent='Chưa có mục nào được chọn. Hãy tích vào từ vựng hoặc ngữ pháp muốn ôn.';return;}$('savedStudyList').innerHTML=entries.map((e,i)=>`<div style="padding:9px;border-bottom:1px solid #f0dfeb"><label style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" ${e.remembered?'checked':''} data-remember="${i}"><span><b>${e.label}</b> · HSK ${e.level} · ${e.type==='grammar'?'Ngữ pháp':'Từ vựng'}<br><small>${e.topic} · ${e.detail||''}</small></span></label><button class="btn" data-remove-saved="${i}" style="margin:5px 0 0 25px">Bỏ lưu</button></div>`).join('');$('savedStudyList').querySelectorAll('[data-remember]').forEach(el=>el.addEventListener('change',()=>{let a=savedItems(),idx=entries[+el.dataset.remember];let j=a.findIndex(x=>x.type===idx.type&&x.topic===idx.topic&&x.label===idx.label);if(j>=0){a[j].remembered=el.checked;localStorage.setItem('saved_items',JSON.stringify(a));}}));$('savedStudyList').querySelectorAll('[data-remove-saved]').forEach(el=>el.addEventListener('click',()=>{let x=entries[+el.dataset.removeSaved];toggleSaved(x.type,x.label,false);renderTopic();}));}
+let chatStep=0;const chatQuestions=['你为什么选择这个话题？','你能举一个生活中的例子吗？','你觉得这个问题还有什么不同的看法？','如果让你提出一个建议，你会怎么说？'];
+function addBubble(role,txt){let b=document.createElement('div');b.className='chat-bubble '+role;b.textContent=(role==='bot'?'小猫老师: ':'Bạn: ')+txt;$('chatLog').appendChild(b);$('chatLog').scrollTop=$('chatLog').scrollHeight;}
+async function callCoach(mode,text,history=[]){const r=await fetch('/.netlify/functions/coach',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+((await cloudClient?.auth.getSession())?.data?.session?.access_token||'')},body:JSON.stringify({mode,text,level:currentTopic.level,topic:currentTopic.title,topicVi:currentTopic.vi,question:currentTopic.q,grammar:currentTopic.grammar,history})});const d=await r.json();if(!r.ok)throw new Error(d.error||'AI chưa được cấu hình');return d;}
+async function sendChat(){let val=$('chatInput').value.trim();if(!val)return;addBubble('user',val);$('chatInput').value='';let btn=$('chatSend');btn.disabled=true;try{let history=[...$('chatLog').querySelectorAll('.chat-bubble')].slice(-10).map(x=>({role:x.classList.contains('bot')?'assistant':'user',content:x.textContent.replace(/^(小猫老师: |Bạn: )/, '')}));let d=await callCoach('chat',val,history);addBubble('bot',d.text||'我们继续练习吧！');if(d.text&&'speechSynthesis'in window){let u=new SpeechSynthesisUtterance(d.text);u.lang='zh-CN';speechSynthesis.speak(u);}let chats=JSON.parse(localStorage.getItem('chat_history')||'[]');chats.push({topic:currentTopic.title,level:currentTopic.level,user:val,assistant:d.text,at:new Date().toISOString()});localStorage.setItem('history_chat',JSON.stringify(chats.slice(-300)));}catch(e){addBubble('bot','Hiện chưa kết nối được AI: '+e.message+' Bạn hãy cấu hình GEMINI_API_KEY trong Netlify để bật gia sư AI thật.');}finally{btn.disabled=false;}}
+$('saveStudyBtn').addEventListener('click',saveStudy);$('showSavedVocab').addEventListener('click',()=>showSaved('vocab'));$('showSavedGrammar').addEventListener('click',()=>showSaved('grammar'));$('chatSend').addEventListener('click',sendChat);$('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat();});$('chatSpeak').addEventListener('click',()=>{let txt=[...$('chatLog').querySelectorAll('.bot')].at(-1)?.textContent.replace('小猫老师: ','')||currentTopic.q;if('speechSynthesis'in window){let u=new SpeechSynthesisUtterance(txt);u.lang='zh-CN';speechSynthesis.speak(u);}});
+$('chatMic').addEventListener('click',()=>{let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert('Trình duyệt chưa hỗ trợ nhận diện giọng nói.');return;}let r=new SR();r.lang='zh-CN';r.onresult=e=>{$('chatInput').value=e.results[0][0].transcript;};r.start();});
+
+function renderList(){document.querySelectorAll(".level").forEach(b=>b.classList.toggle("active",+b.dataset.level===currentLevel));let term=$("search").value.trim().toLowerCase();let items=topics.filter(t=>t.level===currentLevel&&(t.title.toLowerCase().includes(term)||t.vi.toLowerCase().includes(term)));$("topicList").innerHTML=items.map((t)=>`<button class="topic ${t===currentTopic?"active":""}" data-title="${t.title}"><strong>${t.title}</strong><span>${t.vi}</span></button>`).join("")||'<div class="note">Chưa tìm thấy chủ đề phù hợp.</div>';document.querySelectorAll(".topic").forEach(b=>b.addEventListener("click",()=>{currentTopic=topics.find(t=>t.title===b.dataset.title);renderTopic();renderList()}))}
+function renderTopic(){let t=currentTopic;if(!t.grammar){t.grammar=[ ["观点表达","Trình bày quan điểm","我认为……，主要原因是……。"],["举例说明","Đưa ví dụ minh họa","例如……，这说明……。"],["总结建议","Tổng kết và đề xuất","因此，我建议……。"] ];t.outline=["明确说明主题与个人立场","分析主要原因、影响或不同角度","结合实例展开论证","提出建议并总结观点"];t.follow=["你能举一个具体的例子吗？","如果情况发生变化，你的看法会改变吗？"];t.py="";t.qvi="";}$("levelLabel").textContent=`HSK ${t.level} · SPEAKING`;$("topicTitle").textContent=t.title;$("topicVi").textContent=t.vi;$("difficulty").textContent=`${t.level<=2?"Sơ cấp":t.level<=4?"Trung cấp":"Cao cấp"} · ${Math.round(t.time/60)} phút`;$("question").textContent=t.q;$("questionPy").textContent=t.py||"";$("questionVi").textContent=t.qvi||"";$("grammar").innerHTML=t.grammar.map((g,i)=>`<div class="grammar-item"><label style="display:flex;gap:7px;align-items:flex-start"><input type="checkbox" data-save-type="grammar" data-save-index="${i}" ${isSaved("grammar",g[0])?"checked":""}><span><div class="pattern">${g[0]}</div><div class="meaning">${g[1]}</div><div class="example">${g[2]}</div></span></label></div>`).join("");$("outline").innerHTML=t.outline.map(x=>`<li>${x}</li>`).join("");$("followups").innerHTML=t.follow.map(x=>`<li>${x}</li>`).join("");seconds=t.time;updateTimer();$("transcript").value=localStorage.getItem("note_"+t.title)||"";$("saved").textContent="";renderStudyExtras();if($("chatLog"))$("chatLog").innerHTML=`<div class="chat-bubble bot">你好！今天我们来练习：${t.title}。请先用中文回答：${t.q}</div>`;}
+function updateTimer(){$("timer").textContent=String(Math.floor(seconds/60)).padStart(2,"0")+":"+String(seconds%60).padStart(2,"0")}
+function updateProgress(){let done=JSON.parse(localStorage.getItem("doneTopics")||"[]");$("doneCount").textContent=done.length+" chủ đề đã luyện";let pct=Math.round(done.length/topics.length*100);$("progressText").textContent=`Tiến độ: ${pct}%`; $("progressBar").style.width=pct+"%"}
+document.querySelectorAll(".level").forEach(b=>b.addEventListener("click",()=>{currentLevel=+b.dataset.level;currentTopic=topics.find(t=>t.level===currentLevel);renderList();renderTopic()}));
+$("search").addEventListener("input",renderList);
+$("startTimer").addEventListener("click",()=>{if(interval){clearInterval(interval);interval=null;$("startTimer").textContent="▶ Tiếp tục";return}if(seconds<=0)seconds=currentTopic.time;$("startTimer").textContent="Ⅱ Tạm dừng";interval=setInterval(()=>{seconds=Math.max(0,seconds-1);updateTimer();if(seconds===0){clearInterval(interval);interval=null;$("startTimer").textContent="▶ Luyện lại";}},1000)});
+$("resetTimer").addEventListener("click",()=>{clearInterval(interval);interval=null;seconds=currentTopic.time;updateTimer();$("startTimer").textContent="▶ Bắt đầu luyện"});
+$("speakQuestion").addEventListener("click",()=>{if(!("speechSynthesis"in window)){alert("Trình duyệt chưa hỗ trợ đọc văn bản.");return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(currentTopic.q);u.lang="zh-CN";u.rate=.85;speechSynthesis.speak(u)});
+$("markDone").addEventListener("click",()=>{let done=JSON.parse(localStorage.getItem("doneTopics")||"[]");if(!done.includes(currentTopic.title))done.push(currentTopic.title);localStorage.setItem("doneTopics",JSON.stringify(done));updateProgress();$("saved").textContent="✓ Đã lưu tiến độ chủ đề này trên thiết bị."});
+$("transcript").addEventListener("input",()=>{localStorage.setItem("note_"+currentTopic.title,$("transcript").value);$("saved").textContent="Đã tự động lưu ghi chú."});
+$("reviewBtn").addEventListener("click",async()=>{const answer=$("transcript").value.trim(),panel=$("reviewPanel"),out=$("reviewResult");panel.style.display="block";if(!answer){out.textContent="Bạn chưa có câu trả lời. Hãy nhập hoặc nhận diện lời nói trước nhé.";return;}out.textContent="小猫老师 đang phân tích ngữ pháp, từ vựng và cách triển khai…";try{const d=await callCoach('grade',answer);const score=Math.max(0,Math.min(100,Number(d.score)||0));out.innerHTML=`<div class="score-card"><strong>${score}/100</strong><span>Điểm AI đánh giá bài nói (tham khảo)</span></div><p><b>Nhận xét:</b> ${escapeHTML(d.feedback||'')}</p><p><b>Lỗi và cách sửa:</b></p><ul>${(d.corrections||[]).map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><p><b>Cách diễn đạt / ngữ pháp thay thế:</b></p><ul>${(d.alternatives||[]).map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><p><b>Bài mẫu tham khảo:</b><br>${escapeHTML(d.model_answer||'')}</p><p><b>Gợi ý luyện tiếp:</b> ${escapeHTML(d.next_step||'')}</p>`;localStorage.setItem('review_'+currentTopic.title,JSON.stringify({score,answer,feedback:d,at:new Date().toISOString(),topic:currentTopic.title,level:currentTopic.level}));let h=JSON.parse(localStorage.getItem('practice_history')||'[]');h.push({score,answer,feedback:d,topic:currentTopic.title,level:currentTopic.level,at:new Date().toISOString()});localStorage.setItem('history_practice',JSON.stringify(h.slice(-300)));}catch(e){out.innerHTML=`<p>Chưa gọi được AI: ${escapeHTML(e.message)}</p><p>Hãy cấu hình GEMINI_API_KEY trong Netlify. Không có API key, website không thể tự chấm ngữ pháp chính xác; chế độ điểm tham khảo cũ không được giả làm điểm AI.</p>`;}});
+function escapeHTML(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+let mediaRecorder=null,audioChunks=[];let audioUrl=null;
+$('audioStart').addEventListener('click',async()=>{try{const stream=await navigator.mediaDevices.getUserMedia({audio:true});audioChunks=[];mediaRecorder=new MediaRecorder(stream);mediaRecorder.ondataavailable=e=>{if(e.data.size)audioChunks.push(e.data)};mediaRecorder.onstop=()=>{const blob=new Blob(audioChunks,{type:mediaRecorder.mimeType||'audio/webm'});if(audioUrl)URL.revokeObjectURL(audioUrl);audioUrl=URL.createObjectURL(blob);$('audioPlayback').src=audioUrl;$('audioPlayback').style.display='block';$('saved').textContent='Đã thu âm xong. Bạn có thể nghe lại; nội dung chữ vẫn được lưu trong lịch sử luyện.';stream.getTracks().forEach(t=>t.stop());};mediaRecorder.start();$('audioStart').disabled=true;$('audioStop').disabled=false;$('saved').textContent='Đang thu âm…';}catch(e){$('saved').textContent='Không mở được micro: '+e.message;}});
+$('audioStop').addEventListener('click',()=>{if(mediaRecorder&&mediaRecorder.state!=='inactive'){mediaRecorder.stop();$('audioStart').disabled=false;$('audioStop').disabled=true;}});
+$("recordBtn").addEventListener("click",()=>{let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert("Trình duyệt này chưa hỗ trợ nhận diện giọng nói. Bạn có thể nhập câu trả lời vào ô bên dưới.");return}if(recognition){recognition.stop()}recognition=new SR();recognition.lang="zh-CN";recognition.continuous=true;recognition.interimResults=true;recognition.onresult=e=>{let text="";for(let i=0;i<e.results.length;i++)text+=e.results[i][0].transcript+(e.results[i].isFinal?"":"");$("transcript").value=text;localStorage.setItem("note_"+currentTopic.title,text)};recognition.onerror=e=>{$("saved").textContent="Không thể nhận diện: "+e.error};recognition.onend=()=>{$("recordBtn").disabled=false;$("stopRecord").disabled=true};recognition.start();$("recordBtn").disabled=true;$("stopRecord").disabled=false;$("saved").textContent="Đang nghe… hãy nói tiếng Trung."});
+$("stopRecord").addEventListener("click",()=>{if(recognition)recognition.stop()});
+renderList();renderTopic();updateProgress();
+startApp();
+</script>
+</body></html>
